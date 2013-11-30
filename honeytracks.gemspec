@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = HoneyTracks::VERSION
   spec.authors       = ["Alexander Klaiber"]
   spec.email         = ["alex.klaiber@gmail.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.description   = 'Ruby Mapper for honeytracks.com api'
+  spec.summary       = spec.description
   spec.homepage      = "http://honeytracks.com"
   spec.license       = "MIT"
 
