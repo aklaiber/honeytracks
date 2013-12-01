@@ -18,7 +18,14 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+``` ruby
+honey_tracks = HoneyTracks::Track.new('2243443', 'de_DE', '46.244.175.103', 'Default')
+
+honey_tracks.user_login
+honey_tracks.user_logout
+honey_tracks.user_signup
+honey_tracks.click('MarketingIdentifier' => '111', 'LandingPageId' => '222')
+```
 
 ## Contributing
 
