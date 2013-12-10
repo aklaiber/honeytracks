@@ -29,6 +29,10 @@ module HoneyTracks
       post @attributes.merge('Action' => 'User::Click').merge(attributes)
     end
 
+    def virtual_currency_purchase(attributes)
+      post @attributes.merge('Action' => 'VirtualCurrencies::Buy').merge(attributes)
+    end
+
     private
 
     def build_request(attributes)

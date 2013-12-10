@@ -28,4 +28,25 @@ describe HoneyTracks::Track do
     end
   end
 
+  describe '#virtual_currency_purchase' do
+    it 'should build request' do
+      tracker.virtual_currency_purchase(
+          'VirtualCurrencyAmount' => 55,
+          'VirtualCurrencyName' => 'Gold',
+          'PaymentType' => 'CreditCard',
+          'RevenueCurrency' => 'EUR',
+          'PayoutCurrency' => 'EUR',
+          'Revenue' => '1.99',
+          'Payout' => '1.99'
+      ).should eql('ok')
+    end
+  end
+
+  describe '#virtual_goods_feature_purchase' do
+    it 'should build request'
+  end
+
+  describe '#virtual_goods_item_purchase' do
+    it 'should build request'
+  end
 end
