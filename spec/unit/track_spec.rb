@@ -19,12 +19,27 @@ describe HoneyTracks::Track do
     it 'should build request' do
       tracker.signup.should eql('ok')
     end
+    context 'with marketingIdentifier' do
+      it 'should build request' do
+        tracker.signup(
+            'MarketingIdentifier' => 'OFM',
+            'LandingPage' => 'Home',
+            'PartnerName' => 'OFM',
+            'CampaignName' => 'OFM Banner Campaign 1',
+        ).should eql('ok')
+      end
+    end
   end
 
   describe '#click' do
-    xit 'should build request' do
-      #BUG : missing property UniqueCustomerClickToken
-      tracker.click('MarketingIdentifier' => '111', 'LandingPageId' => '222').should eql('ok')
+    it 'should build request' do
+      tracker.click(
+          'UniqueCustomerClickToken' => '123',
+          'MarketingIdentifier' => 'OFM',
+          'LandingPage' => 'Home',
+          'PartnerName' => 'OFM',
+          'CampaignName' => 'OFM Banner Campaign 1',
+      ).should eql('ok')
     end
   end
 
